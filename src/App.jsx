@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './assets/css/App.css'
-import PortfolioContainer from './components/UI/portfolioContainer';
+import PortfolioContainer from './components/portfolio';
 
 function App() {
 
