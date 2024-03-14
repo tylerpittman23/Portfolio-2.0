@@ -17,19 +17,29 @@ body {
   background-color: #260c1a;
 }
 
-.portfolio-container {
-  border: solid white 2px;
-}
-
 .navbar-container{
+  position: fixed;
   display: flex;
+  z-index: 9999;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  border: solid white 2px;
+  /* border: solid white 2px; */
+  width: 96%;
   height: 100px;
+  transition: 1s ease;
 }
+
+.navbar-hidden {
+  top: -100px;
+}
+
+.navbar-visible {
+  top: 0;
+}
+
 .logo {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,8 +60,8 @@ body {
 
 
 .links {
-  width: 53%;
-  border: solid white 2px;
+  width: 85%;
+  /* border: solid white 2px; */
   display: flex;
   justify-content: space-between;
 }
@@ -99,39 +109,46 @@ body {
   width: 100%;
 }
 
-.ham-menu-content span svg {
-  fill: #c5d86d;
+.ham-menu-content button svg {
+  fill: white;
   padding-right: 6px;
   width: 20px;
   height: 20px;
+  transition: 0.5s ease;
 }
 
-.ham-menu-content span{
+.ham-menu-content button{
   margin: 10px;
   padding: 10px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border: solid white 2px;
+  border: solid #c5d86d 2px;
+  background-color: inherit;
   width: fit-content;
   border-radius: 5px;
   font-size: 25px;
-  color: #c5d86d;
+  color: white;
   transition: 0.5s ease;
 }
 
-.ham-menu-content span:hover {
+.ham-menu-content button:hover {
+  background-color: white;
   box-shadow: 6px 6px 0;
-  border-color: #c5d86d;
+  border-color: white;
+  color:#c5d86d;
+}
 
+.ham-menu-content button:hover svg {
+  fill: #c5d86d;
 }
 
 .hero-container {
-  margin-top: 50px;
+  margin-top: 140px;
   padding-left: 10px;
   padding-right: 10px;
-  border: solid white 2px;
+  /* border: solid white 2px; */
   height: 600px;
 }
 
@@ -139,25 +156,25 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: solid white 2px;
+  /* border: solid white 2px; */
   height: 550px;
 }
 
 .introduction {
   padding-left: 60px;
   /* z-index: 9999; */
-  border: solid white 2px;
+  /* border: solid white 2px; */
 }
 
 .intro-container h1 {
   padding-top: 40px;
-  font-size: 30px;
+  font-size: 25px;
   color: #c5d86d;
 }
 
 .intro-container h2 {
   padding-top: 2px;
-  font-size: 110px;
+  font-size: 125px;
 }
 
 .intro-container h2 span {
@@ -173,8 +190,7 @@ body {
 .statement{
   display: flex;
   align-items: center;
-  border: solid white 2px;
-  /* padding-left: 80px; */
+  /* border: solid white 2px; */
   height: 180px;
 }
 
@@ -185,11 +201,12 @@ body {
 
 .scroll-container {
   display: flex;
+  margin-bottom: 90px;
   padding: 15px;
   justify-content: center;
-  align-items: flex-start;
-  border: solid white 2px;
-  height: 140px;
+  align-items: flex-end;
+  /* border: solid white 2px; */
+  height: 60px;
 }
 
 
@@ -199,7 +216,7 @@ body {
   justify-content: space-evenly;
   flex-direction: row;
   margin-top: 20px;
-  border: solid white 2px;
+  /* border: solid white 2px; */
   max-width: 100%;
 }
 
@@ -237,7 +254,7 @@ body {
   z-index: 9999;
   transform: rotate(-90deg);
   transform-origin: left bottom;
-  border: solid white 2px;
+  /* border: solid white 2px; */
   width: 300px;
   height: 20px;
 }
@@ -285,16 +302,114 @@ body {
   transition: 0.5s ease;
 }
 
+.my-work-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid white 2px;
+  /* height: 800px; */
+}
+
+.my-work-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 60%;
+  /* height: 750px; */
+  border: solid white 2px;
+}
+
+.project-card-container {
+  margin: 10px;
+  height: 300px;
+  /* border: solid white 2px; */
+}
+
+.project-card {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  /* border: solid white 2px; */
+  border-radius: 15px;
+  position: relative;
+}
+
+.project-desc {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  height: 100%;
+  left: 0;
+  z-index: 10;
+  width: 45%;
+  border: solid #f05d23 5px;
+  border-radius: 15px;
+  background-color: whitesmoke;
+}
+
+.project-img {
+  cursor: pointer;
+  height: 100%;
+  right: 0;
+  position: absolute;
+  z-index: 12;
+  width: 60%;
+  border: solid white 5px;
+  background-color: green;
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+  /* adds a shadow to just the left side of a card/container */
+  box-shadow: -30px 0 30px -5px  rgba(0, 0, 0, 0.5);
+}
+
+.project-desc h1 {
+  margin-bottom: 15px;
+  color: #260c1a;
+}
+
+.description-text {
+  color: #260c1a;
+}
+
+.technologies {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.technologies span {
+  color:#260c1a;
+}
+
+.project-desc span a{
+  color: #260c1a;
+}
+
+.source-code svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
 @media (max-width: 1100px) {
   .introduction {
     /* padding: 0; */
+  }
+  .my-work-content {
+    width: 75%;
   }
   .card img {
     width: 130px;
     height: 130px;
   }
   .intro-container h1 {
-    font-size: 25px;
+    font-size: 20px;
   }
   .intro-container h2 {
     font-size: 90px;
@@ -310,11 +425,11 @@ body {
 }
 
 @media (max-width: 850px) {
-  .logo {
-    margin-left: 15px;
-  }
   .introduction {
     padding: 0;
+  }
+  .my-work-content{
+    width: 100%;
   }
   .process {
     display: flex;
