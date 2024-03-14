@@ -1,9 +1,10 @@
-import NavbarContainer from "./navbarContainer";
+import NavbarContainer from "./UI/navbarContainer";
 import NavbarContent from "./navbarContent";
-import Email from "./email";
-import Hero from "./hero";
-import Scroll from "./scroll";
-import ProcessContainer from "./processContainer";
+import Email from "./UI/email";
+import Hero from "./UI/hero";
+import Scroll from "./UI/scroll";
+import ProcessContainer from "./UI/processContainer";
+import MyWork from "./UI/myWork";
 
 
 function PortfolioContainer() {
@@ -16,6 +17,7 @@ function PortfolioContainer() {
         <Email />
         <Scroll />
         <ProcessContainer />
+        <MyWork />
         </>
     )
 }

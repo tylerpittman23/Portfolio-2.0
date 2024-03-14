@@ -1,4 +1,4 @@
-import ProcessCard from "./processCard"
+import ProcessCard from "../processContent"
 
 function ProcessContainer() {
     return (

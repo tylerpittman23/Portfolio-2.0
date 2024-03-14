@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react';
+import MobileNavbar from './UI/mobNavbar';
+import DesktopNavbar from './UI/deskNavbar';
 
 function NavbarContent(props) {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-    const [hamOpen, setHamOpen] = useState(false);
 
-    const hamBtnHandler = () => {
-        setHamOpen(true);
-    }
-
+    // handle screen resizing without mediaQueries **PRAISE HANDS**
     useEffect(() => {
+      // console.log('useEffect navBarContent');
         const handleResize = () => {
             setWindowWidth(window.innerWidth);
         }
@@ -20,20 +19,9 @@ function NavbarContent(props) {
     return (
         <>
         {windowWidth > 850 ?
-        <div className="links">
-          <button>00. About</button>
-          <button>01. My Work</button>
-          <button>02. Contact</button>
-        </div>
+        <DesktopNavbar />
           :         
-        <button 
-        className="ham-btn"
-        onClick={() => hamBtnHandler()}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <MobileNavbar />
         }
         </>
     )
