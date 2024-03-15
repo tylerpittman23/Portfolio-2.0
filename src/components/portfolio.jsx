@@ -5,6 +5,7 @@ import Hero from "./UI/hero";
 import Scroll from "./UI/scroll";
 import ProcessContainer from "./UI/processContainer";
 import MyWork from "./UI/myWork";
+import BioContainer from "./UI/bioContainer";
 
 
 function PortfolioContainer() {
@@ -18,6 +19,7 @@ function PortfolioContainer() {
         <Scroll />
         <ProcessContainer />
         <MyWork />
+        <BioContainer />
         </>
     )
 }

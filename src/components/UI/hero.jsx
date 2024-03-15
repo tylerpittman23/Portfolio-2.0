@@ -1,7 +1,7 @@
 function Hero() {
     return(
         <>
-        <div id='about' className='hero-container'>
+        <div id='hero' className='hero-container'>
           <div className='intro-container'>
             <div className='introduction'>
               <h1>Hello There, I'm</h1>
