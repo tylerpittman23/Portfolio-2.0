@@ -1,13 +1,49 @@
 import { useState, useEffect } from "react";
 
 function DesktopNavbar() {
+
+  const links = [
+    {
+      text: '00. My Work',
+      linkId: 'myWork'
+    }, 
+    {
+      text: '01. About',
+      linkId: 'about'
+    }, 
+    {
+      text: '02. Contact',
+      linkId: 'contact'
+    }, 
+    {
+      text: '03. Resume',
+      linkId: 'resume'
+    },
+  ];
+  const [currentSectionId, setCurrentSectionId] = useState('hero');
+  
+  const scrollToSection = (sectionId) => {
+    return () => {
+      setCurrentSectionId(sectionId);
+      const sectionEl = document.getElementById(sectionId);
+      if (sectionEl) {
+        sectionEl.scrollIntoView({ behavior: 'smooth' })
+      }
+    }
+  };
+
     return (
         <>
         <div className="links">
-          <button>00. My Work</button>
-          <button>01. About</button>
-          <button>02. Contact</button>
-          <button>03. Resume</button>
+          {links.map((link) => {
+            return (<button
+                      key={link.linkId}
+                      onClick={scrollToSection(link.linkId)}
+                      className={currentSectionId === link.linkId ? 'active-nav-link' : 'nav-link' }
+                    >
+                      {link.text}
+                    </button>)
+          })}
         </div>
         </>
     )

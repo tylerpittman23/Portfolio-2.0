@@ -9,13 +9,13 @@ function NavbarContainer() {
     // console.log('useEffect navbarContainer')
     const handleScroll = () => {
       const currentScrollPos = document.documentElement.scrollTop;
-
-      if (currentScrollPos > lastScrollTopRef.current) {
-        setIsVisible(false)
-        // console.log('scrolling down');
-      } else {
+      currentScrollPos < 700
+      if (currentScrollPos < 700) {
         setIsVisible(true)
-        // console.log('scrolling up');
+      } else if (currentScrollPos - lastScrollTopRef.current < -25){
+        setIsVisible(true)
+      } else if (currentScrollPos - lastScrollTopRef.current > 25){
+        setIsVisible(false)
       }
       lastScrollTopRef.current = currentScrollPos;
     }
