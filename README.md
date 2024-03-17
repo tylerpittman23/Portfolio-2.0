@@ -2,7 +2,7 @@
 
 Welcome to my portfolio website, crafted with React and Vite for an optimal web development experience.
 
-**[Visit My Portfolio](portfolio link)** - Dive into my world and explore what I have to offer.
+**[Visit My Portfolio](https://tyler-pittman.netlify.app/)** - Dive into my world and explore what I have to offer.
 
 ## Features
 
