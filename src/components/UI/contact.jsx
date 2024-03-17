@@ -5,17 +5,51 @@ function Contact() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+    const [errors, setErrors] = useState({});
+    const [popup, setPopup] = useState({ show: false, messages: [] });
+
+    const validateEmail = (email) => {
+        const testRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return testRegex.test(email);
+    };
 
     const handleValueChange = (event) => {
-            const { name, value } = event.target;
-            if (name === 'name') {
-                setName(value)
-            } else if (name === 'email') {
-                setEmail(value)
-            } else { {/* name === 'message' */}
-                setMessage(value);
+        const { name, value } = event.target;
+        let tempErrors = {...errors};
+
+        if (value.trim() === '') {
+            tempErrors[name] = `${name.charAt(0).toUpperCase() + name.slice(1)} is required`;
+        } else {
+            delete tempErrors[name];
+            if (name === 'email' && !validateEmail(value)) {
+                    tempErrors[name] = 'Email is invalid';
             }
-    }
+        }
+
+        setErrors(tempErrors)
+
+        if (name === 'name') {
+            setName(value)
+        } else if (name === 'email') {
+            setEmail(value)
+        } else { {/* name === 'message' */}
+            setMessage(value);
+        }
+    };
+
+    const handleSumbit = (event) => {
+        event.preventDefault();
+        const errorMessages = Object.values(errors);
+        if (errorMessages.length > 0 || !name || !email || !message) {
+            setPopup({ show: true, messages: errorMessages.length > 0 ? errorMessages : ['Please fill in all fields.'] });
+        } else {
+            console.log('Form data:', { name, email, message });
+        }
+    };
+
+    const closePopup = () => {
+        setPopup({ show: false, messages: [] });
+    };
 
     return (
         <>
@@ -24,13 +58,25 @@ function Contact() {
                 <h1>Like what you see?</h1>
                 <span>beep me.</span>
             </div>
-            <form className="contact-form">
+            {popup.show && (
+                <div className="popup">
+                    <div className="popup-content">
+                        <span className="close" onClick={closePopup}>&times;</span>
+                        <ul>
+                            {popup.messages.map((message, index) => (
+                                <li key={index}>{message}</li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+            )}
+            <form className="contact-form" onSubmit={handleSumbit}>
                     <input 
                         type="text" 
                         name="name"
                         placeholder="Name" 
                         id="contact-form-name" 
-                        value={name}
+                        value={errors[name] ? errors[name] : name}
                         onChange={handleValueChange}
                     />
                     <input 

@@ -1,7 +1,7 @@
 function ProjectDetails(props) {
     const { project } = props;
     const { techs } = project;
-    
+
     const goToApp = (link) => {
         return () => {
             window.open(link, '_blank');
@@ -14,10 +14,10 @@ function ProjectDetails(props) {
             <h1>{project.title}</h1>
             <span className='description-text'>{project.description}</span>
             <div className='technologies'>
-            {project.techs.map((tech, index) => (
+            {techs.map((tech, index) => (
                 
                         <span key={index}>
-                            {tech},
+                            {tech}{index < techs.length - 1 ? ',' : ''}
                         </span>
                     ))}
             </div>

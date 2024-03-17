@@ -130,6 +130,7 @@ body {
 .ham-menu-content button{
   margin: 10px;
   padding: 10px;
+  cursor: pointer;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -282,6 +283,7 @@ body {
 
 .ham-btn {
   margin-right: 15px;
+  cursor: pointer;
   background-color: inherit;
   display: flex;
   flex-direction: column;
@@ -347,11 +349,12 @@ body {
 }
 
 .project-desc {
-  /* position: absolute; */
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 10px;
+  padding-right: 70px;
   height: 100%;
   left: 0;
   z-index: 10;
@@ -383,6 +386,7 @@ body {
 
 .description-text {
   color: #260c1a;
+  margin-bottom: 15px;
 }
 
 .technologies {
@@ -393,6 +397,7 @@ body {
 }
 
 .technologies span {
+  padding-right: 6px;
   color:#260c1a;
 }
 
@@ -457,11 +462,36 @@ body {
 .contact {
   display: flex;
   flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
   height: 100%;
   width: 40%;
   border: solid white 2px;
   background-color: whitesmoke;
   border-radius: 30px;
+}
+
+.popup {
+  display: flex;
+  justify-content: center;
+  /* border: solid #260c1a 2px; */
+  width: 60%;
+  padding: 10px;
+}
+
+.popup-content {
+  display: flex;
+}
+
+.popup-content span{
+  color: red;
+  padding-right: 15px;
+  font-size: 30px;
+}
+
+.popup-content ul li {
+  list-style-type: none;
+  color: red;
 }
 
 .contact-header {
@@ -473,6 +503,7 @@ body {
   margin-bottom: 30px;
   border-radius: inherit;
   height: 25%;
+  width: 100%;
   padding: 6px;
 }
 
@@ -555,6 +586,57 @@ body {
   fill: rgb(118, 118, 250);
 }
 
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 50px;
+  /* border: solid white 2px; */
+  height: 100px;
+}
+
+.footer button {
+  position: relative;
+  /* z-index: 1; */
+  cursor: pointer;
+  border: solid #351124 2px;
+  border-radius: 10px;
+  background-color: transparent;
+  font-size: 20px;
+  height: 60%;
+  width: 200px;
+  margin-right: 3px;
+  margin-left: 3px;
+  padding: 6px;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer button span {
+  color: white;
+  z-index: 2;
+}
+
+.footer button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: whitesmoke; /* Background color */
+  border-radius: 10px;
+  transition: width 0.4s ease-in-out;
+  z-index: -1;
+}
+
+.footer button:hover::before {
+  width: 100%;
+}
+
+.footer button:hover span{
+  color: #260c1a;
+}
+
 
 @media (max-width: 1100px) {
   .introduction {
@@ -628,6 +710,9 @@ body {
     width: 240px;
     height: 240px;
   }
+  .project-desc {
+    padding-right: 35px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -698,6 +783,7 @@ body {
     width: 100%;
     height: 55%;
     padding-bottom: 50px;
+    padding-right: 5px;
   }
   .project-img {
     width: 100%;

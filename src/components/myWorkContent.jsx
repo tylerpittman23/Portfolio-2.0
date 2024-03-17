@@ -10,7 +10,7 @@ function MyWorkContent() {
     const projects = [
         {
             title: 'Blackjack Wild',
-            description: 'great game',
+            description: 'Javscript based casino style BlackJack game!',
             src: blackjackWildSrc,
             techs: ['HTML','CSS','JavaScript','Expres','Node.js','MySQL','Handlebars.js','Sequelize'],
             gh: 'https://github.com/Justinh144/BlackJackWild',
@@ -18,7 +18,7 @@ function MyWorkContent() {
         },
         {
             title: 'Studdy Buddy',
-            description: 'helps study',
+            description: 'A note taking app built to use a file like strucuture to keep your notes organized',
             src: notesAppSrc,
             techs: ['HTML','CSS','JavaScript','express','Node.js','Handlebars.js','MySQL','Sequelize'],
             gh: 'https://github.com/tylerpittman23/Notes-App',
@@ -26,7 +26,7 @@ function MyWorkContent() {
         },
         {
             title: 'Forecast Finder',
-            description: 'dont freeze',
+            description: 'Never let the weather get the best of you, find your forecast!',
             src: weatherAppSrc,
             techs: ['HTML','CSS','JavaScript','OpenWeather API'],
             gh: 'https://github.com/tylerpittman23/Weather-App',
@@ -34,7 +34,7 @@ function MyWorkContent() {
         },
         {
             title: 'Schedule Manager',
-            description: 'call mom',
+            description: 'Keep your day organized and on track with the help of this app.',
             src: scheduleManagerSrc,
             techs: ['HTML','CSS','JavaScript','Day.js'],
             gh: 'https://github.com/tylerpittman23/Work-Day-Scheduler',

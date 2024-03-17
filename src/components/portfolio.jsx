@@ -6,6 +6,7 @@ import Scroll from "./UI/scroll";
 import ProcessContainer from "./UI/processContainer";
 import MyWork from "./UI/myWork";
 import BioContainer from "./UI/bioContainer";
+import Footer from "./UI/footer";
 
 
 function PortfolioContainer() {
@@ -20,6 +21,7 @@ function PortfolioContainer() {
         <ProcessContainer />
         <MyWork />
         <BioContainer />
+        <Footer />
         </>
     )
 }
