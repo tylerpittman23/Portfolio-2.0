@@ -14,7 +14,7 @@ function MyWorkContent() {
             src: blackjackWildSrc,
             techs: ['HTML','CSS','JavaScript','Expres','Node.js','MySQL','Handlebars.js','Sequelize'],
             gh: 'https://github.com/Justinh144/BlackJackWild',
-            href: 'https://blackjack-wild-b09cd00c5ac4.herokuapp.com/classic'
+            href: 'https://shielded-beyond-59466-3224172544c4.herokuapp.com/'
         },
         {
             title: 'Studdy Buddy',
