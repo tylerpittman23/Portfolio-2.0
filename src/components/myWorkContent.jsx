@@ -12,15 +12,15 @@ function MyWorkContent() {
             title: 'Blackjack Wild',
             description: 'Javscript based casino style BlackJack game!',
             src: blackjackWildSrc,
-            techs: ['HTML','CSS','JavaScript','Expres','Node.js','MySQL','Handlebars.js','Sequelize'],
+            techs: ['HTML','CSS','JavaScript','Express','Node.js','MySQL','Handlebars.js','Sequelize'],
             gh: 'https://github.com/Justinh144/BlackJackWild',
             href: 'https://shielded-beyond-59466-3224172544c4.herokuapp.com/'
         },
         {
             title: 'Studdy Buddy',
-            description: 'A note taking app built to use a file like strucuture to keep your notes organized',
+            description: 'A note taking app built to use a file like structure to keep your notes organized',
             src: notesAppSrc,
-            techs: ['HTML','CSS','JavaScript','express','Node.js','Handlebars.js','MySQL','Sequelize'],
+            techs: ['HTML','CSS','JavaScript','Express','Node.js','Handlebars.js','MySQL','Sequelize'],
             gh: 'https://github.com/tylerpittman23/Notes-App',
             href: ''
         },
