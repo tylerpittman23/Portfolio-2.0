@@ -1,7 +1,7 @@
 import ProjectDetails from "./UI/projectDetails";
 
 import blackjackWildSrc from '../assets/images/blackjackWild.png';
-import notesAppSrc from '../assets/images/notesApp.png';
+import yapAppSrc from '../assets/images/yap.png';
 import weatherAppSrc from '../assets/images/weatherApp.png';
 import googleBooksSrc from '../assets/images/googlebooks.png';
 
@@ -17,12 +17,12 @@ function MyWorkContent() {
             href: 'https://shielded-beyond-59466-3224172544c4.herokuapp.com/'
         },
         {
-            title: 'Studdy Buddy',
-            description: 'A note taking app built to use a file like structure to keep your notes organized',
-            src: notesAppSrc,
-            techs: ['HTML','CSS','JavaScript','Express','Node','Handlebars','MySQL','Sequelize'],
-            gh: 'https://github.com/tylerpittman23/Notes-App',
-            href: ''
+            title: 'Yap',
+            description: 'A real-time chat appplication where you can chat and answer polls',
+            src: yapAppSrc,
+            techs: ['HTML','CSS','JavaScript','Express', 'Node', 'React', 'MUI', 'Mongoose', 'GraphQL', 'Algoliasearch'], 
+            gh: 'https://github.com/Brady-hash/Yap/',
+            href: 'https://yap-pcfa.onrender.com/'
         },
         {
             title: 'Forecast Finder',
@@ -36,7 +36,7 @@ function MyWorkContent() {
             title: 'Book Finder',
             description: 'Find your next best read with this Google Books api search tool',
             src: googleBooksSrc,
-            techs: ['HTML','CSS','JavaScript','Mongoose','Express','React','Apollo Client', 'Bootstrap' ],
+            techs: ['HTML','CSS','JavaScript','Mongoose','Express','React','GraphQL', 'Bootstrap' ],
             gh: 'https://github.com/tylerpittman23/Book-Search-Engine',
             href: 'https://book-search-engine-nfj7.onrender.com/'
         },
