@@ -2,7 +2,7 @@ import ProjectDetails from "./UI/projectDetails";
 
 import blackjackWildSrc from '../assets/images/blackjackWild.png';
 import yapAppSrc from '../assets/images/yap.png';
-import weatherAppSrc from '../assets/images/weatherApp.png';
+import SSsrc from '../assets/images/S&S-731.png';
 import googleBooksSrc from '../assets/images/googlebooks.png';
 
 function MyWorkContent() {
@@ -25,12 +25,12 @@ function MyWorkContent() {
             href: 'https://yap-pcfa.onrender.com/'
         },
         {
-            title: 'Forecast Finder',
-            description: 'Never let the weather get the best of you, find your forecast!',
-            src: weatherAppSrc,
-            techs: ['HTML','CSS','JavaScript','OpenWeather API'],
-            gh: 'https://github.com/tylerpittman23/Weather-App',
-            href: 'https://tylerpittman23.github.io/Weather-App/'
+            title: 'Stacked & Stored 731',
+            description: 'Meet all of your organization needs and live in peace with this professional organizer',
+            src: SSsrc,
+            techs: ['HTML','CSS','JavaScript','React', 'Node'],
+            gh: 'https://github.com/tylerpittman23/stackedNstored731',
+            href: 'https://stackednstored731.netlify.app/'
         },
         {
             title: 'Book Finder',
