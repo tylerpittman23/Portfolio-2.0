@@ -43,7 +43,7 @@ function Contact() {
         if (errorMessages.length > 0 || !name || !email || !message) {
             setPopup({ show: true, messages: errorMessages.length > 0 ? errorMessages : ['Please fill in all fields.'] });
         } else {
-            console.log('Form data:', { name, email, message });
+            // console.log('Form data:', { name, email, message });
         }
     };
 
